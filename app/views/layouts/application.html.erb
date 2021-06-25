@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-100">
   <head>
     <title>AlphaBlog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,8 +10,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+  <body class="d-flex flex-column h-100">
+
+    <main class="flex-shrink-0">
+      <%= render 'layouts/navigation' %>
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </main>
+
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>
