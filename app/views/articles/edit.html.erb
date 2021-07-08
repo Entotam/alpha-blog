@@ -1,6 +1,6 @@
 <h2>Editing an article</h3>
 
-<%= render 'errors' %>
+<%= render 'shared/errors', obj: @article %>
 <%= render 'form' %>
 
 <%= link_to 'Return to articles', articles_path %>
