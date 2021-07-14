@@ -10,10 +10,6 @@ class User < ApplicationRecord
 										uniqueness: { case_sensitive: false },
 										length: { maximum: 90 },
 										format: { with: URI::MailTo::EMAIL_REGEXP }
-<<<<<<< HEAD
 
 	has_secure_password										
-=======
-	has_secure_password
->>>>>>> users-signup
 end
