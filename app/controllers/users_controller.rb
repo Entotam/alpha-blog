@@ -4,6 +4,20 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
+		@user = User.find(params[:id])
+		if @user.save
+			flash[:notice] = "Your profile has succesfuly updated"
+			redirect_to root_path
+		else
+			render 'edit'
+		end
+	end
+
 	def create
 		@user = User.new(user_params)
 		if @user.save
