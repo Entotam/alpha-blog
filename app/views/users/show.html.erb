@@ -1,7 +1,12 @@
 <div class="container">
 	<h2>Your Profile</h3>
-
-		<%= render 'article' %>
-
-	<%= link_to 'Return to Blog', root_path %>
+		<div class="container">
+			<%= link_to 'Edit', edit_user_path(@user), class: "card-link btn btn-outline-secondary"%>
+		</div>
+		<div class="container">
+			<%= render 'article' %>
+		</div>
+		<div class="container">
+			<%= link_to 'Return to Blog', root_path %>
+		</div>
 </div>
