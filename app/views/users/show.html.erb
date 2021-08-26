@@ -3,6 +3,7 @@
 		<% if logged_in? && @user == current_user %>
 			<div class="container">
 				<%= link_to 'Edit', edit_user_path(@user), class: "card-link btn btn-outline-secondary"%>
+				<%= link_to 'Delete account', user_path(@user), class: "card-link btn btn-outline-secondary text-danger", method: :delete, data: { confirm: "Are you sure?" }%>
 			</div>
 		<% end %>
 		<div class="container">
