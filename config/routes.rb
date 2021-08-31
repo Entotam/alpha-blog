@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :users, except: [:new]
   resources :articles
+  resources :categories, except: [:destroy]
 end
