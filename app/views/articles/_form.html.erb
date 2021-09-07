@@ -11,6 +11,10 @@
 	</div>
 
 	<div class="mb-3">
+		<%= f.collection_select :category_ids, Category.all, :id, :name, {}, { multiple: true, size: 3, class: "form-select shadow-sm rounded" } %>
+	</div>
+
+	<div class="mb-3">
 		<%= f.submit 'Create article', class: 'btn btn-secondary' %>
 	</div>
 <% end %>
