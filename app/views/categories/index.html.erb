@@ -6,6 +6,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Category</th>
+      <th scope="col">Number of Articles</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -13,6 +15,8 @@
 	    <tr>
 	      <th scope="row"><%= category.id %></th>
 	      <td><%= link_to category.name, category_path(category) %></td>
+	      <td><%= pluralize(category.articles.count, "article") %></td>
+	      <td><%= link_to 'Edit', edit_category_path(category), class: "btn btn-dark" %></td>
 	    </tr>
 	  <% end -%>
   </tbody>
